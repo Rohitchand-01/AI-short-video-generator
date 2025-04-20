@@ -14,7 +14,7 @@ const Header = () => {
           height={100}
           className='w-25 h-20'
         />
-        <h2 className='font-bold'>Vionyx: AI short Generator</h2>
+        <h2 className='font-bold'>AI short Generator</h2>
       </div>
       <div className='flex items-center gap-12'>
         <Button> Dashboard</Button>

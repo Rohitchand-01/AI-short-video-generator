@@ -23,7 +23,7 @@ const SideNav = () => {
     {
       id: 2,
       name: 'Create New',
-      path: '/create-new',
+      path: '/dashboard/create-new',
       icon: FileVideo
     },
     {
@@ -41,15 +41,15 @@ const SideNav = () => {
   ];
 
   return (
-    <div className='shadow-md p-5 w-64 h-screen'>
+    <div className='shadow-md p-5 rounded-2 w-64 h-screen'>
       <div>
         {MenuOption.map((item) => {
-          const isActive = pathname.startsWith(item.path); // Check if the path starts with the current route
+          const isActive = pathname === item.path;
           return (
             <Link href={item.path} key={item.id}>
               <div
-                className={`flex items-center gap-3 p-3 rounded-md cursor-pointer transition-colors duration-200 ${
-                  isActive ? 'bg-blue-500 text-white' : 'hover:bg-blue-100'
+                className={`flex items-center mb-8 gap-3 p-3 rounded-md cursor-pointer transition-colors duration-200 ${
+                  isActive ? 'bg-primary text-white' : 'hover:bg-purple-200'
                 }`}
               >
                 <item.icon className='w-5 h-5' />
