@@ -1,14 +1,6 @@
-'use client'
-
-import React from 'react'
-
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
-} from '@/components/ui/select'
+'use client';
+import React from 'react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const SelectDuration = ({ onUserSelect }) => {
   return (
@@ -17,8 +9,8 @@ const SelectDuration = ({ onUserSelect }) => {
       <p className='text-gray-500'>Duration of your video</p>
 
       <Select
-        onValueChange={value => {
-          onUserSelect('duration', value)
+        onValueChange={(value) => {
+          onUserSelect('duration', value);
         }}
       >
         <SelectTrigger className='w-full mt-2 p-6 text-lg'>
@@ -31,7 +23,7 @@ const SelectDuration = ({ onUserSelect }) => {
         </SelectContent>
       </Select>
     </div>
-  )
-}
+  );
+};
 
-export default SelectDuration
+export default SelectDuration;
